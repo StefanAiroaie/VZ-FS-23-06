@@ -1,0 +1,29 @@
+section{
+    background-color: #A5D6A7;
+}
+
+section :nth-of-type(1){
+    background-color: #4DD0E1;
+}
+section p:nth-of-type(1){
+    background-color: #C5CAE9;
+}
+
+article {
+    background-color: #F48Fb1;
+}
+
+article:first-of-type h2{
+    background-color: #7986cb;
+}
+
+article:first-of-type p{
+    background-color: #ff8a65;
+}
+
+
+button{
+    background-color: #304FFE;
+    color: white;
+    border-radius: 3px;
+}

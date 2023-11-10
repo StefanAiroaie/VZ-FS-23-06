@@ -1,0 +1,120 @@
+* {
+    margin: 0 0 0 0;
+}
+
+* ul, li, a{
+
+}
+
+@font-face {
+    font-family: FrederickatheGreat-Regular;
+    src: url("../fonts/FrederickatheGreat-Regular.ttf");
+}
+@font-face {
+    font-family: OpenSand-Light;
+    src: url("../fonts/OpenSans-Light.ttf");
+}
+
+header {
+    background-image: url("../img/bgd.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100vh;
+    margin:  0 0 0 0;
+}
+
+
+ul li{
+    color: red;
+}
+
+header h1{
+    padding-top: 30px;
+    padding-left: 80px;
+    color: white;
+    font-family: FrederickatheGreat-Regular;
+    font-size: 40px;
+
+
+}
+
+header h2 {
+    color: white;
+    text-align: center;
+    font-family: FrederickatheGreat-Regular;
+    font-size: 30px;
+    width: 300px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    padding: 0 auto;
+    margin-top: 150px;
+}
+ 
+header h2::first-letter{
+    text-transform: uppercase;
+}
+
+header h2::first-line{
+    text-transform: lowercase;
+}
+
+
+/* header section {
+    display: flex;
+    justify-content: center; /* Alinează elementele în centru pe axa orizontală 
+    align-items: center; /* Alinează elementele în centru pe axa verticală
+}
+ */
+
+
+header p{
+    width: 400px;
+    font-family: OpenSand-Light;
+    font-size: small;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding: 0 auto;
+    color: white;
+    text-align: center;
+}
+
+header section a{
+    font-family: OpenSand-Light;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 15px 5px 15px;
+    text-align: center;
+    display: block;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+header nav ul {
+    display: flex;
+    display: block;
+    margin-top: 120px;
+}
+
+header nav ul a{
+    font-family: OpenSand-Light;
+    font-size: small;
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+    padding-right: 10%;
+    line-height: 30px;
+    margin: 0 auto;
+
+}
+
+footer{
+    background-color: #3A3B4A;
+    height: 200px;
+}
+

@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* css fur classe aufgaben */
+
+.aufgaben {
+    display: block;
+    margin: 0 auto;
+
+}
+
+.aufgaben h3 {
+    text-align: center;
+    margin: 1vh;
+    background-color: rgb(255, 245, 233);
+    padding: 20px;
+}
+
+
+
+
+
+/*  Start CSS Display-Level-1_1*/
+
+
+
+#display__Level1 button {
+    margin: 0 auto;
+    display: block;
+    border: none;
+    background-color: darkslategray;
+    width: 400px;
+    border-radius: 3px;
+    padding: 20px;
+    font-size: 1.5rem;
+    color: white;
+
+}
+
+#display__Level1 {
+    padding: 10vh;
+    background-color: blanchedalmond;
+}
+
+#display__Level1 .img {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    border: 1px solid;
+    margin-top: 30px;
+    display: none;
+
+}
+
+#display__Level1 button:hover {
+    background-color: blueviolet;
+}
+
+
+#display__Level1 button:hover+.img {
+    display: block;
+}
+
+/*  end CSS Display-Level-1_1*/
+
+
+
+
+
+/* Start Pseudo Elemente  */
+
+
+/* START__CSS Pseudo-Elements-Level-1_5 */
+
+#Level-1_5 {
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    height: 120px;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+#Level-1_5 p:last-of-type {
+    text-transform: uppercase;
+    text-align: right;
+    padding-top: 10px;
+    
+}
+
+#Level-1_5 p:first-of-type::first-letter{
+    font-size: 40px;
+    color: rebeccapurple;
+}
+
+#Level-1_5 p:first-child::before{
+    content: url("https://cdn-icons-png.flaticon.com/512/157/157247.png");
+    position: absolute;
+    transform: scale(0.2);
+}
+
+/* aici trebuie de rezolvat cu citatele */
+
+#Level-1_5 p:first-child::after{
+    content: url("https://cdn-icons-png.flaticon.com/512/157/157248.png");
+    position: absolute;
+    transform: scale(0.2);
+}
+
+#Level-1_5 span:first-child:hover{
+    border: 2px solid black;
+    color: red;
+}
+
+#Level-1_5 p span:last-child:hover{
+    border: 1px solod black;
+    background-color: blue;
+    color: white;
+}
+
+/* END__CSS Pseudo-Elements-Level-1_5 */
+
+
+
+/* START__CSS Pseudo-Elements-Level_1_4 */
+
+#Level-1_4 p {
+    display: block;
+    padding: 5px;
+    border: 1px solid orange;
+    margin: 10px;
+    text-indent: 20px;
+}
+
+#Level-1_4 p::before {
+    content: "Info";
+    background: goldenrod;
+    font-weight: bolder;
+    padding: 0;
+    margin: 0;
+}
+
+#Level-1_4 p::selection {
+    color: goldenrod;
+    text-decoration: underline;
+}
+
+#Level-1_4 p::after {
+    content: " \2665";
+    color: darkgoldenrod;
+}
+
+
+
+/* END__CSS Pseudo-Elements-Level_1_4 */
+
+
+
+/* START__CSS Pseudo-Elements-Level-1_3 */
+
+#Level-1_3 {
+    display: block;
+    margin: 10vh;
+
+}
+
+
+#Level-1_3 ul {
+    width: 600px;
+    border: 1px solid;
+    list-style: none;
+    margin-left: 5vw;
+    font-size: 2em;
+}
+
+#Level-1_3 h1::first-letter {
+    font-size: 3em;
+    color: red;
+
+}
+
+#Level-1_3 h1:hover::first-letter {
+    font-size: 3em;
+    color: blue;
+
+}
+
+/*  color otuline */
+#Level-1_3 ul li:nth-of-type(3) {
+    background-color: aquamarine;
+
+}
+
+#Level-1_3 ul li:nth-of-type(4) {
+    background-color: aquamarine;
+
+}
+
+/* underline */
+#Level-1_3 ul li:nth-of-type(5) {
+    text-decoration: underline;
+
+}
+
+#Level-1_3 ul li:nth-of-type(6) {
+    text-decoration: underline;
+
+}
+
+
+/* linie durch */
+#Level-1_3 ul li:nth-of-type(1) {
+    text-decoration: line-through
+}
+
+#Level-1_3 ul li:nth-of-type(2) {
+    text-decoration: line-through
+}
+
+
+
+
+/* before */
+#Level-1_3 ul li:before {
+    margin-right: 10px;
+    content: url("../img/check.png");
+
+}
+
+#Level-1_3 ul li:nth-of-type(3):before {
+    margin-right: 10px;
+    content: url("../img/doing.png");
+
+}
+
+#Level-1_3 ul li:nth-of-type(4):before {
+    margin-right: 10px;
+    content: url("../img/doing.png");
+
+}
+
+#Level-1_3 ul li:nth-of-type(5):before {
+    margin-right: 10px;
+    content: url("../img/no.png");
+
+}
+
+#Level-1_3 ul li:nth-of-type(6):before {
+    margin-right: 10px;
+    content: url("../img/no.png");
+
+}
+
+/* end before */
+
+
+/* after */
+
+#Level-1_3 ul li::after {
+    content: url("../img/gym.png");
+    padding-left: 15px;
+}
+
+#Level-1_3 ul li:nth-of-type(2):after {
+    content: url("../img/bill.png");
+    padding-left: 15px;
+}
+
+#Level-1_3 ul li:nth-of-type(3):after {
+    content: url("../img/dance.png");
+    padding-left: 15px;
+}
+
+#Level-1_3 ul li:nth-of-type(4):after {
+    margin-right: 10px;
+    content: url("../img/eat.png");
+
+}
+
+#Level-1_3 ul li:nth-of-type(5):after {
+    margin-left: 10px;
+    content: url("../img/book.png");
+
+}
+
+#Level-1_3 ul li:nth-of-type(6):after {
+    margin-right: 10px;
+    content: url("../img/organize.png");
+
+}
+
+/* end after */
+
+/* END__CSS Pseudo-Elements-Level-1_3 */
+
+
+
+/* Start css Aufgabe_1_2 */
+
+#Level_1_2 {
+    padding-left: 15px;
+}
+
+
+#Level_1_2 h3::first-letter {
+    color: cadetblue;
+    font-size: xx-large;
+}
+
+#Level_1_2 h3:hover::first-letter {
+    color: rebeccapurple;
+}
+
+#Level_1_2 ul {
+    padding-left: 30px;
+    padding-top: 20px;
+
+}
+
+#Level_1_2 ul li {
+    padding: 3px;
+
+}
+
+#Level_1_2 ul li::first-letter {
+    font-size: x-large;
+
+}
+
+#Level_1_2 ul li:first-child::first-letter {
+    color: aquamarine;
+    text-decoration: overline;
+
+}
+
+#Level_1_2 ul li:nth-child(2)::first-letter {
+    color: rgb(255, 127, 127);
+    text-decoration: underline;
+
+}
+
+#Level_1_2 ul li:nth-child(3)::first-letter {
+    color: rgb(127, 255, 142);
+    text-decoration: line-through;
+
+}
+
+#Level_1_2 ul li:nth-child(3) {
+    text-decoration: line-through;
+
+}
+
+#Level_1_2 section p:first-of-type::first-line {
+    font-size: xx-large;
+
+}
+
+
+#Level_1_2 section p:first-of-type {
+    color: rgb(92, 91, 91);
+    text-indent: 30px;
+
+}
+
+/* aici am probleme cu I din primul P (:nth-of-type(1)) */
+#Level_1_2 section p:not(p:first-child)::first-letter {
+    font-size: xx-large;
+    color: red;
+}
+
+#Level_1_2 section p:not(p:first-child)::first-line {
+    font-size: large;
+    color: green;
+
+}
+
+
+#Level_1_2 section p:hover:not(p:first-child)::first-line {
+    font-size: large;
+    color: rgb(128, 85, 0);
+
+}
+
+#Level_1_2 section p:hover::first-line {
+    color: orange;
+
+}
+
+/* End css Aufgabe_1_2 */

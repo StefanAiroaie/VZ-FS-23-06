@@ -1,0 +1,171 @@
+
+* h3{
+    text-align: center;
+    color: green;
+    margin-bottom: 50px;
+    text-decoration: underline;
+}
+
+
+section:nth-of-type(4) p{
+    color: aqua;
+    background-color: black;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px 25px 25px 25px;
+    border: 25px solid gray
+}
+
+
+section:nth-of-type(3) div{
+    border: 1px solid black;
+
+}
+
+section:nth-of-type(3) p{
+    border: 3px solid black;
+    margin: 35px 35px 35px 35px;
+    background-color: aqua;
+    padding: 30px 30px 30px;
+
+}
+
+/* css Box-Model-Level-1_4 */
+
+section:nth-of-type(2) h2{
+
+    color: red;
+}
+
+
+section:nth-of-type(2) article div {
+    margin-left: 30px;
+}
+
+section:nth-of-type(2) article div{
+    background-color: aquamarine;
+    width: 300px;
+    height: 300px;
+    border: 15px solid blue;
+    margin: 50px solid red;
+    
+
+}
+
+section:nth-of-type(2) article ul li{
+    color: red;
+    list-style: none;
+    
+}
+
+section:nth-of-type(2) article ul li:before {   
+    content: "";  
+    border-color: transparent red;
+    border-style: solid;  
+    border-width: 8px 0 8px 8px;  
+    display: block;  
+    height: 0;  
+    width: 0;  
+    left: -1em;  
+    top: 0.9em;  
+    position: relative;  
+} 
+
+
+/* li:before {   
+    content: "\25b6";  
+    display: inline-block;  
+    height: 0;  
+    width: 0;
+    margin-right:20px
+} */
+
+
+/* end css Box-Model-Level-1_4 */
+
+
+/*> Start CSS Box-Model-Level-2_1 */
+
+
+section:nth-of-type(1) h1{
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 500px;
+    padding: 15px 15px 15px 15px;
+    border: 5px dotted black;
+    border-radius: 15px;
+
+}
+
+section:nth-of-type(1) h2{
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 350px;
+    padding: 15px 15px 15px 15px;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 2px 2px 20px 1px;
+}
+
+section:nth-of-type(1) h3{
+    background: white;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 10px 10px 10px 10px;
+    width: 150px;
+    border: 10px double yellowgreen;
+    border-radius: 15px;
+
+
+}
+
+
+
+/* aici am probleme */
+/* section:nth-of-type(1) {
+    text-align: center;
+    margin: 0 auto;
+} */
+
+section:nth-of-type(1) p{
+    margin:0 auto;
+    width: 500px;
+    color: blueviolet;
+    border: 2px solid orange;
+    padding: 10px 10px 10px 10px;
+}
+
+section:nth-of-type(1) p:first-letter{
+    font-size: 30px;
+
+}
+
+
+
+section:nth-of-type(1) p:hover::first-letter{
+    color: red;
+    font-size: 40px;
+
+}
+
+
+section:nth-of-type(1) ul,ol{
+    margin:0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 300px;
+    text-decoration: underline;
+    border: 3px dotted green;
+    padding: 15px 15px;
+}
+
+
+
+
+/*> End CSS Box-Model-Level-2_1 */

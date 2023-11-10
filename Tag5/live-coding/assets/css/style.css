@@ -1,0 +1,121 @@
+/* Global Styling */
+*::selection {
+    color: blue;
+    background-color: yellow;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style: none;
+}
+
+/* pseudo lements */
+
+
+h1::first-letter {
+    font-size: 60px;
+    color: red;
+}
+
+/* h1::selection{
+    color:blue;
+    background-color: yellow;
+} */
+
+
+p {
+    color: blue;
+}
+
+article li::after {
+    content: " 🥰";
+}
+
+article li::before {
+    content: "😎 "
+}
+
+
+section .p__bgPurple::first-line {
+    font-size: 40px;
+    color: orange;
+
+}
+
+.p__bgPurple {
+    background-color: blueviolet;
+}
+
+.p__fontSize {
+    font-size: 50px
+}
+
+button {
+    width: 100px;
+    background-color: pink;
+    border: none;
+    color: aliceblue;
+    padding: 16px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.show__img {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.show__img img {
+    display: none;
+    margin: 20px;
+
+}
+
+button:hover {
+    display: block;
+    background-color: blue;
+
+}
+
+button:hover+div img {
+    display: block;
+
+}
+
+.bg__img {
+    background-image: url(../img/bgd.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+
+}
+
+
+#section__one,
+#section__two,
+#section__three {
+    height: 10vh;
+}
+
+#section__one {
+    background-color: aqua;
+
+}
+
+a:active{
+    color: brown;
+}
+
+#section__two {
+    background-color: rgb(115, 0, 255);
+
+}
+
+#section__three {
+    background-color: rgb(13, 0, 255);
+}

@@ -1,0 +1,80 @@
+
+
+
+@font-face {
+    font-family: Frederickat;
+    src: url("../fonts/FrederickatheGreat-Regular.ttf");
+}
+@font-face {
+    font-family: OpenSand-Light;
+    src: url("../fonts/OpenSans-Light.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+header {
+    background-image: url("../img/bgd.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100vh;
+    padding: 20px 8%;
+
+}
+
+
+
+
+ul li{
+    color: red;
+}
+
+header h2{
+    padding-top: 30vh;
+    color: white;
+    font-family: Fredericka;
+    font-size: 2.5rem;
+
+}
+
+header div{
+    width: 300px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+
+}
+
+header div{
+    width: 300px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+
+header div h1{
+    font-size: 30px;
+    font-family: Fredericka;
+
+}
+
+header div a{
+    color: white;
+    border: 1px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
