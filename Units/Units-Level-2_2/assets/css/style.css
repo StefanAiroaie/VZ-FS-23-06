@@ -6,8 +6,9 @@
 
 
 main {
-    border: 2px solid red;
-    background-image: url(../img/background-img.jpg);
+    /* border: 2px solid red; */
+    background-size: cover;
+    background-image: url(../img/bgd-img.jpg);
     height: 100vh;
     padding: 10%;
 
