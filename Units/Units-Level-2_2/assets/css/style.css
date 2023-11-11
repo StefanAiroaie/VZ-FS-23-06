@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+main {
+    border: 2px solid red;
+    background-image: url(../img/background-img.jpg);
+    height: 100vh;
+    padding: 10%;
+
+}
+
+div {
+
+    background-color: rgba(186, 180, 180, 0.5);
+   
+
+}
+
+h1 {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 3%;
+}
+
+span{
+
+}
