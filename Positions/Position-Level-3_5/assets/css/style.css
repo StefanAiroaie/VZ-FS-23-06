@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+
+:root {
+    --first-font: Montserrat;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    padding: 220px, 1030x, 200px, 0px;
+    border: 2px solid orange;
+    background-image: url(../img/hero-img.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+
+
+
+
+.hero {
+    display: block;
+    width: 411.7px;
+    height: 234.41px;
+    margin-top: 200px;
+}
+
+
+header p:first-of-type {
+    font-size: 24px;
+    font-family: var(--first-font);
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+
+
+
+
+
+nav {
+    position: sticky;
+    background-color: black;
+    height: 5vh;
+    bottom: 0;
+
+}
+
+
+nav ul li {
+    display: inline-block;
+
+}
+
+
+nav li a {
+    list-style: none;
+    text-decoration: none;
+    color: azure;
+
+
+
+}
