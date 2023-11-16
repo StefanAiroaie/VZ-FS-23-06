@@ -9,11 +9,89 @@ html {
 }
 
 
-form {
-    margin-top: 20vh;
+
+main {
+    display: flex;
+    width: 45vw;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+
+
+
 }
 
-.contact-formular {
+
+form {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.24);
+    border-radius: 4px;
+    margin: auto;
+    border: 2px solid black;
+    margin-top: 3rem;
+    justify-content: space-between;
+    border: none;
+}
+
+.form-header {
+    align-self: flex-start;
+    background-color: rgb(71, 134, 170);
+    color: white;
+    width: 100%;
+
+}
+
+
+form .form-header h1 {
+    font-size: 1.5rem;
+}
+
+
+form .form-header h1,
+p {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-bottom: -5rem;
+
+}
+
+form .form-header p {
+    font-size: 0.8rem;
+
+}
+
+.contact-formular h2 {
+    font-size: 1.7rem;
+    color: rgb(71, 134, 170);
+    padding-left: 2rem;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: aquamarine;
+    padding: 0 3rem;
+}
+
+div {
+    display: block;
+}
+
+
+/* Stell dir vor,
+ein/e Kund:in bittet dich darum,
+ein schönes Anmeldeformular zu erstellen. Folgende Elemente werden in dem Formular angesprochen: Full name (required),
+Address,
+Email,
+Phone number,
+Password,
+Terms of policy und Submit. Das Design ist ein Entwurf,
+du kannst dir auch selber etwas ausdenken */
+/* .contact-formular {
 
     display: flex;
     width: 30vw;
@@ -23,12 +101,12 @@ form {
     margin: auto;
     background-color: rgba(128, 128, 128, 0.101);
     gap: 0.5rem;
-}
+} */
 
 /* oben grauen platz muss weg */
 
 
-h2 {
+/* h2 {
     justify-self: flex-start;
     background-color: #43D1AF;
     color: white;
@@ -36,8 +114,8 @@ h2 {
     text-align: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
-}
-
+} */
+/* 
 input[type="submit"] {
     background-color: #43D1AF;
     border: none;
@@ -45,9 +123,9 @@ input[type="submit"] {
     margin-bottom: 2.3rem;
     color: white;
     width: 23.5vw;
-}
+} */
 
-input[type="text"],
+/* input[type="text"],
 input[type="email"],
 textarea {
     width: 23vw;
@@ -55,14 +133,14 @@ textarea {
     font-size: 0.7rem;
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgba(255, 255, 255, 0.738);
-}
+} */
 
 
 
-input[type="submit"]:hover {
+/* input[type="submit"]:hover {
     background-color: #2EBC99;
 
-}
+} */
 
 
 
