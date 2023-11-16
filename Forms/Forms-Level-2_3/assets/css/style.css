@@ -5,6 +5,7 @@
 .contact-formular div {
     padding: 0.2rem;
 }
+
 /* 
 input[type="text"] {
     margin-left: 50px;
@@ -17,5 +18,23 @@ input[type="text"] {
     width: 40vw;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+}
+
+.text label {
+    min-width: 150px;
+}
+
+.radio label {
+    min-width: 150px;
+    align-self: flex-end;
+
+
+}
+
+
+
+div {
+    display: flex;
     justify-content: space-between;
 }
