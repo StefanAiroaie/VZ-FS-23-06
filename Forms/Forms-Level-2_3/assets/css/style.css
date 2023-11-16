@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+.contact-formular div {
+    padding: 0.2rem;
+}
+/* 
+input[type="text"] {
+    margin-left: 50px;
+
+} */
+
+/* align habe ich noch nicht geschaft */
+
+.contact-formular {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
