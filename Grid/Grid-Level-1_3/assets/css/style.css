@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+
+body {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 5vh 80vh 5vh;
+    grid-template-areas:
+        "top top"
+        "ads content"
+        "bottom bottom";
+    gap: 0.1rem;
+    margin: 1rem;
+}
+
+
+
+header {
+    background-color: blue;
+    grid-area: top;
+
+}
+
+section {
+    background-color: green;
+    grid-area: ads;
+
+}
+
+main {
+    background-color: red;
+    grid-area: content;
+}
+
+footer {
+    background-color: rgb(68, 7, 68);
+    grid-area: bottom;
+}
