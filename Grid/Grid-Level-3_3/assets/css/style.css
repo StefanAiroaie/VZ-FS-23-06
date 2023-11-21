@@ -31,15 +31,14 @@ main {
     background-color: var(--color-01);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-
-    /* grid-template-rows: 5vw 5vw 5vw 30vw 30vw 30vw; */
+    grid-template-rows: 5vw 5vw 5vw 20vw 30vw 30vw;
     grid-template-areas:
         "logo logo logo logo logo"
         "nav nav nav nav nav"
         "main-thema main-thema main-thema main-thema ad-header"
-        "article1 article2 photo photo ad1"
-        "article3 article4 photo photo ad2"
-        "article5 article6 photo photo ad3";
+        "article1 article2 photo photo ads"
+        "article3 article4 photo photo ads"
+        "article5 article6 photo photo ads";
 }
 
 .logo {
@@ -55,9 +54,11 @@ main {
 
 .nav {
     grid-area: nav;
-    border: 1px solid green;
+
     align-self: center;
     padding: 0.5rem 0;
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
 
 
 }
@@ -88,6 +89,7 @@ main {
 }
 
 
+
 .ad-header {
     grid-area: ad-header;
     align-self: center;
@@ -102,8 +104,27 @@ main {
 }
 
 
+/* .blog {
+    background-color: aqua;
+    grid-area: blog;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 5vw 5vw 5vw 20vw 30vw 30vw;
+    grid-area:
+        "article1 article2"
+        "article3 article4"
+        "article5 article6";
+    background-color: bisque;
 
+} */
 
+/* .blog {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+} */
 
 .article1 {
     background-color: rgb(68, 137, 137);
@@ -148,13 +169,20 @@ main {
     width: 100%;
 }
 
+
+.ads {
+    grid-area: ads;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
 .ad1 {
-    /* width: 230px;
-    height: 240px; */
     border: 5px solid var(--color-03);
     grid-area: ad1;
-    padding: 2rem;
-    margin-bottom: 1rem;
+    padding: 1rem;
 
 
 }
@@ -168,17 +196,16 @@ main {
 }
 
 .ad2 {
-    /* width: 230px;
-    height: 240px; */
     border: 5px solid var(--color-03);
     grid-area: ad2;
     padding: 0.3rem;
-    margin-bottom: 1rem;
 }
 
 .ad3 {
-    /* width: 230px;
-    height: 240px; */
     border: 5px solid var(--color-03);
     grid-area: ad3;
+    width: 100%;
+    align-self: center;
+    display: block;
+
 }
