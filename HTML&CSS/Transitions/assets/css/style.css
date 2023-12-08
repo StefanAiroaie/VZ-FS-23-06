@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h1 {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+
+
+/*  Transition-Level-1_1 */
+.Transition-Level-1_1 {
+    width: 100vw;
+    background-color: rgba(128, 128, 128, 0.497);
+    height: 150px;
+    padding: 1rem;
+    position: relative;
+
+}
+
+.Transition-Level-1_1 div {
+    position: absolute;
+    background-color: brown;
+    height: 50px;
+    width: 50px;
+    transform-origin: 0% 0%;
+
+    transition: all 5s 0.6s linear;
+
+}
+
+.Transition-Level-1_1 div:hover {
+    transform: scaleX(50);
+
+}
+
+
+/*  Transition-Level-1_2 */
+
+.Transition-Level-1_2 {
+    width: 100vw;
+    background-color: rgba(128, 128, 128, 0.497);
+    height: 200px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+
+}
+
+.Transition-Level-1_2 .cub {
+    height: 50px;
+    width: 50px;
+
+}
+
+.Transition-Level-1_2 .cub:nth-of-type(1) {
+    background-color: red;
+    transition: all 3s 0.3s ease-in-out;
+}
+
+.Transition-Level-1_2 .cub:nth-of-type(2) {
+    background-color: green;
+    transition: all 3s 0.5s ease-in-out;
+}
+
+.Transition-Level-1_2:hover .cub:nth-of-type(1),
+.Transition-Level-1_2:hover .cub:nth-of-type(2) {
+    transform: translate(90vw);
+}
+
+
+/* Transition-Level-2_1 */
+
+.Transition-Level-2_1 {
+    position: relative;
+    margin-left: 40%;
+    width: 300px;
+
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 0, 0, 0.179);
+    width: 100%;
+    height: 0;
+    transition: .5s ease-in-out;
+    overflow: hidden;
+
+}
+
+.overlay p {
+    color: white;
+    position: absolute;
+    font-size: 2rem;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+
+.Transition-Level-2_1:hover .overlay {
+    height: 100%;
+}

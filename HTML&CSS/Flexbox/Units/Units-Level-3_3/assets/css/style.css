@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: MavenPro;
+    src: url(../fonts/MavenPro-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Gilda;
+    src: url(../fonts/GildaDisplay-Regular.ttf);
+}
+
+:root {
+    --first-font: MavenPro;
+    --second-font: Gilda;
+}
+
+body {
+    width: 100vh;
+    height: 100vw;
+}
+
+header {
+    width: 1440px;
+    height: 694;
+    background-color: #333333;
+    border: 2px solid red;
+}
+
+/* figma header 
+background: #333333;
+width: 1440px
+height: 694px
+ */
+
+
+
+
+header p:first-child {
+    width: 74.24px;
+    height: 41px;
+    padding-top: 15px;
+    margin-left: 20px;
+}
+
+header p:first-child {
+    font-family: var(--first-font);
+    font-size: 16, 7px;
+    line-height: 20.68px;
+    letter-spacing: 4px;
+    color: #949494;
+    font-weight: 700;
+}
+
+
+
+
+/* to be solved: text inded secon line logo */
+/* header p:not(::first-line):nth-of-type(1) {
+    text-indent: 15px;
+    color: #949494;
+} */
+
+
+/* figma layot .hero
+background: linear-gradient(45deg, rgba(255, 0, 255, 0.475) 20%, rgba(39, 39, 240, 0.88) 50%, #48CEFA 100%);
+
+width: 300px
+height: 227px
+top: 126px
+left: 570px
+padding: 0px, 0px, 20px, 0px
+border-radius: 8px */
+
+.hero {
+    width: 300px;
+    height: 227;
+    margin-top: 126px;
+    margin-left: 570px;
+    padding: 0px, 0px, 20px, 0px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, rgba(255, 0, 255, 0.475) 20%, rgba(39, 39, 240, 0.88) 50%, #48CEFA 100%);
+}
+
+.hero h2 {
+    width: 300px;
+    height: 153px;
+    padding: 30px, 65, 66px, 10px, 65, 85px;
+    font-family: var(--second-font);
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 400;
+    text-align: center;
+    color: aliceblue;
+
+}
+
+/* figma h2 layout
+width: 300px
+height: 153px
+padding: 30px, 65.66px, 10px, 65.85px */
+
+/* font-family: Gilda Display;
+font-size: 48px;
+font-weight: 400;
+line-height: 56px;
+letter-spacing: 0em;
+text-align: center; */
+
+
+
+/* .hero {
+    width: 237.21px;
+    height: 38px;
+    margin-top: 169px;
+} */
+
+/* figma .hero text & typo 
+width: 237.21px
+height: 38px
+top: 169px
+left: 32.7px
+font-family: Maven Pro;
+font-size: 16px;
+font-weight: 400;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: center;
+color:#00000
+ */
+
+
+.hero p {
+    margin: 0 auto;
+    padding-bottom: 30px;
+    font-family: var(--first-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+}
+
+
+header ul {
+    width: 1440px;
+    height: 140px;
+    padding: 8px, 22.8px, 8px, 1328.93px;
+    text-align: right;
+}
+
+header li a {
+    text-decoration: none;
+    color: #8C8C8C;
+    font-family: var(--first-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    padding: 15px;
+}
+
+header li a:hover {
+    text-shadow: 5px 3px 15px white;
+}
+
+
+.services {
+    width: 1390px;
+    height: 2230px;
+    top: 994px;
+    left: 50px;
+    border: 2px orange;
+}
+
+/* section .services {
+    width: 333.58px height: 64.5px top: 85px
+} */
+
+

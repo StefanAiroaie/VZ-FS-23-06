@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url(../fonts/Raleway-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style-type: none;
+    color: #333;
+}
+
+header {
+    height: 76px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 1em;
+    margin-left: 8em;
+    color: #666;
+    font-size: 1.5em;
+}
+
+.logo:hover {
+    color: #333;
+}
+
+ul {
+    color: #333;
+    display: flex;
+    gap: 2em;
+    margin: 2em;
+    margin-right: 20em;
+    font-size: 0.75em;
+}
+
+ul a:hover {
+    color: #337ab7;
+}
+
+nav {
+    display: flex;
+    border-bottom: 1px solid grey;
+    width: 100vw;
+}
+
+.content {
+    background: url(../img/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+}
+
+.hero-text {
+    height: 80vh;
+    width: 100vw;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 1em;
+}
+
+.hero-text h2 {
+    font-size: 3em;
+    font-weight: 400;
+    margin-top: 1em
+}
+
+.hero-text p {
+    font-weight: 100;
+    margin-top: 1em;
+}
+
+.hero-text a {
+    font-size: 0.75em;
+    text-align: center;
+    color: white;
+    border: 2.5px solid white;
+    padding: 1em 2em;
+    width: 10rem;
+    font-weight: 600;
+}
+
+.hero-text a:nth-of-type(1):hover {
+    background-color: white;
+    color: black;
+    border: 2.5px solid white;
+    transition: 0.3s;
+}
+
+.hero-text a:nth-of-type(2) {
+    background-color: #745df9;
+    border: 2.5px solid #745CF9;
+}
+
+.hero-text a:nth-of-type(2):hover {
+    background-color: #5543be;
+    border: 2.5px solid #5543be;
+    transition: 0.3s;
+}
+
+.hero-text .hero-buttons {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75em;
+}
