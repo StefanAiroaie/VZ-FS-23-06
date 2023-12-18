@@ -1,6 +1,11 @@
 const woerter = ["Banane", "Kaktus", "Flausch", "Ente", "Apfel", "Auto", "Giraffe", "Schmetterling", "Krokodil", "Lampe"];
 
-kelin = woerter.filter(worterlength => worterlength.indexOf() > 6)
-console.log(kelin);
 
+function sortworter(parameter) {
+    let wortsmalleras6 = parameter.filter(word => word.length <= 6)
+    return wortsmalleras6
+}
+
+let worterUnter6 = sortworter(woerter)
+console.log(worterUnter6);
 
