@@ -33,18 +33,21 @@ let myMusic = [
 myMusic.forEach((infos) => {
     const createDiv = document.createElement("div")
 
-    const title = document.createElement("p")
-    title.innerHTML = infos.title
-    createDiv.appendChild(title)
+    const rYear = infos.release_year
+    if (rYear > 1975) {
+        const title = document.createElement("p")
+        title.innerHTML = infos.title
+        createDiv.appendChild(title)
+        const artist = document.createElement("p")
+        artist.textContent = infos.artist
+        createDiv.appendChild(artist)
+        const medium = document.createElement("p")
+        medium.textContent = infos.medium
+        createDiv.appendChild(medium)
+        document.body.appendChild(createDiv)
+    }
 
-    const artist = document.createElement("p")
-    artist.textContent = infos.artist
-    createDiv.appendChild(artist)
+    //adds div
 
-    const medium = document.createElement("p")
-    medium.textContent = infos.medium
-    createDiv.appendChild(medium)
-
-    document.body.appendChild(createDiv)
 })
 
