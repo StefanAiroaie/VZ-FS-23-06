@@ -11,7 +11,7 @@ let name = "Canyon";
 let obj1 = { name: "Merida", fahrrad: fahrrad };
 let obj2 = { name: "Scott", fahrrad: fahrrad };
 
-fahrrad(obj1.fahrrad())
-fahrrad(obj2.fahrrad())
-fahrrad2(obj1.fahrrad())
-fahrrad2(obj2.fahrrad())
+this.fahrrad() //empty
+obj1.fahrrad() // merinda
+obj2.fahrrad() //scot
+
