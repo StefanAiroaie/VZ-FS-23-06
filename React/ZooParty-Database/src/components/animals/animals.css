@@ -1,0 +1,14 @@
+.animalsCard {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    box-shadow: 1px 1px 3px 1px solid grey;
+}
+
+figure {
+    font-size: 3rem;
+}
