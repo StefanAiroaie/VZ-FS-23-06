@@ -1,0 +1,72 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+
+/* mein CSS */
+
+.fqaList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.fqaCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 1rem;
+  width: 500px;
+}
+
+
+
+.darkMode .fqaCard {
+  border: 1px solid white;
+}
+
+
+.lightMode .fqaCard {
+  border: 1px solid black;
+}
+
+
+
+
+
+/* GLOBAL LIGHT DARK MODE */
+.darkMode {
+
+  background-color: black;
+  color: white;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.lightMode {
+
+  background-color: white;
+  color: black;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+
+.lightMode button {
+
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+
+.darkMode button {
+
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
