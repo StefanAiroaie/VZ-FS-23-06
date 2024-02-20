@@ -40,8 +40,8 @@ const sumFunc = (array) => {
 }
 
 
-const FirstLetterToUppercase = (string) => {
-    return chartAt[0].toUpperCase()
+const firstLetterToUppercase = (array) => {
+    return array.map(word => (word.charAt(0).toLowerCase() + word.slice(1)))
 
 
 }
@@ -51,4 +51,24 @@ const stringToUppercase = (array) => {
 }
 
 
-export default { sortFunc, firstEllement, allMinusLast, allMinusFirst, onlyLast, sumFunc, stringToUppercase }
+const removeDuplicate = (array) => {
+    return [...new Set(array)]
+}
+
+
+
+const removeWord = (array, string) => {
+    return array.filter((element) => element !== string)
+}
+
+
+const randomNumberbetween = (n1, n2) => {
+    return Math.floor(Math.random() * (n2 - n1 + 1) + n1);
+};
+
+
+const lastLetterEgalFirstLetter = (word, letter) => {
+    return word[word.length - 1] === letter;
+};
+
+export default { sortFunc, firstEllement, allMinusLast, allMinusFirst, onlyLast, sumFunc, stringToUppercase, firstLetterToUppercase, removeDuplicate, removeWord, lastLetterEgalFirstLetter, randomNumberbetween }

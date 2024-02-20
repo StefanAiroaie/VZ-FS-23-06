@@ -15,22 +15,25 @@ export const numbers = [1, 6, 4, 2, 6, 8, 1, 4, 6, 4, 2, 1, 7, 9, 5, 55]
 - Returnează doar ULTIMUL element al array-ului.
 - Returnează TOATE elementele EXCEPTÂND PRIMUL din array.
 
-
 - Returnează suma elementelor array-ului "numbers".
 
-
+- Creează o funcție căreia i se va pasa un șir de caractere. Aceasta trebuie să transforme prima literă în majusculă.
 - Creează o funcție căreia i se va pasa un șir de caractere. Aceasta trebuie să transforme întregul șir în majuscule.
+- Returnează un array care conține doar valori unice. Elimină elementele duplicate! => Input: [1,6,9,2,1,6,7,10] => Output: [1,6,9,2,7,10]
 
 
 
 - Scrie o funcție care elimină complet un element specificat din array-ul tău => Input: (["remove", "stay", "stay5", 22, true, "remove"], "remove") => Output: ["stay", "stay5", 22, true]
-- Returnează un array care conține doar valori unice. Elimină elementele duplicate! => Input: [1,6,9,2,1,6,7,10] => Output: [1,6,9,2,7,10]
+
+
+
+
 
 
 
 - Funcție fără array, dar cu parametri. Fiecare dintre următoarele puncte reprezintă o FUNCȚIE SEPARATĂ!
 - Funcția primește doi parametri. Returnează un număr aleatoriu care se află între acești doi parametri.
-- Creează o funcție căreia i se va pasa un șir de caractere. Aceasta trebuie să transforme prima literă în majusculă.
+
 
 - Creează o funcție cu doi parametri. Aceasta trebuie să verifice dacă ultima literă a primului parametru corespunde cu al doilea parametru => Input: ('Test', 't') => Output: true => Input: ('Test', 'q') => Output: false
 */
