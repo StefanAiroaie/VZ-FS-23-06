@@ -1,10 +1,7 @@
 import fs, { mkdir } from "fs"
 import { access, constants } from 'node:fs';
 
-
-
 const checkFile = "files/doc.txt"
-
 
 mkdir("files", (err) => {
     if (err) {
