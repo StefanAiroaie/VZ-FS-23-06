@@ -1,6 +1,6 @@
-import { constants } from "buffer";
-import fs, { access, readFile } from "fs"
+import fs from "fs"
 import data from './data.json' assert {type: 'json'};
+// import data from "./data.json" with { type: "json" };
 
 
 console.log(data);
