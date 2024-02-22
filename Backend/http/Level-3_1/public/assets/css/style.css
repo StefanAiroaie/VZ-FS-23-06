@@ -1,0 +1,135 @@
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.00) 100%), #DAA520;
+    font-family: Nunito;
+
+}
+
+
+body {
+
+    margin: 0 auto;
+    margin-top: 6rem;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.25);
+    padding: 0 3rem;
+    width: 1152px;
+    padding-bottom: 64px;
+
+
+
+
+
+
+    /* background: linear-gradient(180deg, rgba(200, 54, 54, 0.5) 0%, rgba(255, 255, 255, 0.00) 100%); */
+    /* background-color: linear-gradient(180deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.00) 100%); */
+}
+
+
+h1 {
+    color: #313235;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+    padding-left: 3rem;
+}
+
+.logoText {
+    color: #3E3F43;
+    font-family: Nunito;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 6px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+}
+
+a {
+    color: rgba(34, 34, 34, 0.75);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #DAA520;
+}
+
+.singUp {
+    border-radius: 4px;
+    border: 1px solid #3E3F43;
+    background: #F9BDBD;
+    padding: .4rem 1.2rem;
+}
+
+.singUp:hover {
+    color: white;
+}
+
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.heroText {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 3rem 0;
+    height: 70%;
+}
+
+h3 {
+    color: #3E3F43;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h3 span {
+    font-weight: 700;
+}
+
+img {
+    width: 568px;
+    height: 577px;
+    flex-shrink: 0;
+}
