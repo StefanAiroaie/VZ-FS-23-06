@@ -8,11 +8,41 @@ const app = express()
 
 
 app.use(express.static("public"))
-// app.use(express.static(__dirname + '/public'));
 
-// app.get("/", (req, res) => {
-//     res.sendFile("/index.html")
+
+app.get("/stuff.html", (req, res) => {
+    fs.readFile(("data.json"), { encoding: "utf-8" }).then((data) => {
+        res.json(JSON.parse(data))
+        console.log(data);
+    })
+    fs.writeFile("/stuff.html", { flag: a }, JSON.stringify(data)).then(() => {
+        res.end();
+    });
+})
+
+// app.post("stuff.html", (req, res) => {
+//     fs.writeFile("stuf.html", { flag: "a" } => {
+//         res.data
+//     })
 // })
+
+
+
+
+// test 
+// const apiLink = {
+//     products: `https://ih-beers-api2.herokuapp.com/beers`,
+//     detailProduct: `https://ih-beers-api2.herokuapp.com/beers/`,
+//     randomProduct: `https://ih-beers-api2.herokuapp.com/beers/random`
+// }
+
+
+// fetch(apiLink.products)
+//     .then(response => response.json())
+//     .then(data => {
+//         fs.writeFile("/stuff.html", JSON.stringify(data))
+//             .catch(error => console.error('Error:', error));
+//     })
 
 
 
@@ -21,7 +51,9 @@ app.listen(port, () => {
 })
 
 
-
+/** dishes.push(newDish);
+    fs.writeFile("./dishes.json", JSON.stringify(dishes)).then(() => {
+      res.end(); */
 
 
 /*Alege o persoană pe care o admiri și creează un site web unde să găsești informații despre această persoană. Aceasta poate fi un autor, muzician, o celebritate sau cineva pe care îl cunoști personal.
