@@ -3,24 +3,34 @@ import { useState } from "react";
 
 const ToDoForm = ({ addTodo }) => {
 
-    const [value, setValue] = useState("")
+  const [value, setValue] = useState("")
 
-    const submitButton = e => {
-        e.preventDefault()
-        addTodo(value)
-        setValue("")
-        console.log("value", value);
-    }
+  const submitButton = e => {
+    e.preventDefault()
+    addTodo(value)
+    setValue("")
+    console.log("value", value);
+  }
 
-    return (
-        <>
-            <h3>hier ist to do form</h3>
-            <form onSubmit={submitButton}>
-                <input type="text" name="" id="" placeholder="Write your task here" onChange={(e) => setValue(e.target.value)} value={value} />
-                <button type="submit">add the task</button>
-            </form>
-        </>
-    );
+  return (
+    <>
+      <h3 className="text-sm p-3 ">add here your daily tasks</h3>
+      <form className="flex gap-3 justify-between mb-3" onSubmit={submitButton}>
+        <input
+          type="text"
+          name="addTask"
+          id="addTask"
+          onChange={(e) => setValue(e.target.value)} value={value}
+          class="placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+          placeholder="write your task here"
+        />
+        <button
+          className="bg-indigo-500 rounded hover:bg-indigo-900 text-s text-white p-3"
+          type="submit">add
+        </button>
+      </form >
+    </>
+  );
 }
 
 export default ToDoForm;
