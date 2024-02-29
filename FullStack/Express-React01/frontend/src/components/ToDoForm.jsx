@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useAppState } from "../context";
+import { createContext, useContext, useState } from "react";
 
 
-const ToDoForm = ({ addTodo }) => {
+const ToDoForm = () => {
 
-  const [value, setValue] = useState("")
+  // use state from context
+  const { value, setValue, addTodo } = useAppState();
 
+  //set the walue from input field aka adds the task
   const submitButton = e => {
     e.preventDefault()
     addTodo(value)
@@ -21,7 +24,7 @@ const ToDoForm = ({ addTodo }) => {
           name="addTask"
           id="addTask"
           onChange={(e) => setValue(e.target.value)} value={value}
-          class="placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+          className="placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
           placeholder="write your task here"
         />
         <button
@@ -35,40 +38,6 @@ const ToDoForm = ({ addTodo }) => {
 
 export default ToDoForm;
 
-
-/**
-  const { updateBirds } = useAppState();
-
-  const nameInputRef = useRef();
-  const imageUrlInputRef = useRef();
-  const descriptionInputRef = useRef();
-
-  const handleSubmit = () => {
-    const name = nameInputRef.current.value;
-    const imageUrl = imageUrlInputRef.current.value;
-    const description = descriptionInputRef.current.value;
-    fetch("http://localhost:3000/birds", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, description, imageUrl }),
-    })
-      .then(() => {
-        // Falls der Request erfolgreich war, updaten wir die Liste der
-        // Vögel im Context Provider
-        updateBirds();
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  };
- * 
- * 
- * 
- * 
- * 
- */
 
 
 

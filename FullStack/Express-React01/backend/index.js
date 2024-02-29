@@ -21,10 +21,16 @@ try {
 }
 
 
+const readServerDB = async () => {
+    const todos = await fs.readFile("./todo.json", { encoding: "utf-8" });
+    return JSON.parse(todos);
+}
+
+
+
 app.get("/api-todo", async (req, res) => {
     try {
-        const todos = await fs.readFile("./todo.json", { encoding: "utf-8" });
-        const todosJson = JSON.parse(todos);
+        const todosJson = await readServerDB()
         res.json(todosJson);
     } catch (err) {
         res.status(500).end();
@@ -35,12 +41,12 @@ app.get("/api-todo", async (req, res) => {
 app.post("/api-todo", async (req, res) => {
     try {
         const newTodo = req.body;
-        console.dir({ newTodo })
         if (!newTodo.task) {
             throw new Error("TODO underdefined")
         }
-        const todos = await fs.readFile("./todo.json", { encoding: "utf-8" });
-        const todosJson = JSON.parse(todos);
+        const todosJson = await readServerDB()
+        res.json(todosJson);
+
         const newTodos = [...todosJson, newTodo];
         await fs.writeFile("./todo.json", JSON.stringify(newTodos));
         res.status(201).json(newTodo);
@@ -50,8 +56,81 @@ app.post("/api-todo", async (req, res) => {
 });
 
 
+app.patch("/api-todo/:id", async (req, res) => {
+    try {
+        const id = req.params.id;
+        console.log(id);
+
+        const patchData = req.body
+
+        console.log("patchData", patchData);
+
+        const todos = await readServerDB();
+
+        const todoChangeStatus = todos.find((item) => item.id === id);
+
+        todoChangeStatus.completed = patchData.completed
+
+        console.log("todos", todos);
+        console.log("todoChangeStatus", todoChangeStatus);
+        await fs.writeFile("./todo.json", JSON.stringify(todos));
+
+        res.sendStatus(204);
+    } catch (err) {
+        console.error(err);
+        res.sendStatus(500);
+    }
+});
+
+
+
+
+app.delete("/api-todo/:id", async (req, res) => {
+    try {
+        const id = req.params.id;
+        console.log(id);
+
+        let todos = await readServerDB();
+
+        todos = todos.filter(function (el) {
+            return el.id !== id;
+        });
+
+        await fs.writeFile("./todo.json", JSON.stringify(todos));
+        res.sendStatus(200);
+    } catch (err) {
+        console.error(err);
+        res.sendStatus(500);
+    }
+});
+
+
+
+
+
+
+
 
 
 app.listen(PORT, () => {
     console.log(`server runs on -> http://localhost:${PORT}`);
 })
+
+
+
+
+// app.delete("/:id", (req, res) => {
+//     const id = req.params.id;
+//     try {
+//         games = games.filter(function (el) {
+//             return el.id !== id;
+//         });
+
+//         res.send({ rest: games });
+//     } catch (error) {
+//         res.send({ error: error.message });
+//     }
+// });
+
+
+
