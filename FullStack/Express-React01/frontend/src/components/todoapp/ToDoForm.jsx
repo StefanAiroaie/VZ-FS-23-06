@@ -1,4 +1,4 @@
-import { useAppState } from "../context";
+import { useAppState } from "../../context";
 import { createContext, useContext, useState } from "react";
 
 
@@ -17,8 +17,7 @@ const ToDoForm = () => {
 
   return (
     <>
-      <h3 className="text-sm p-3 ">add here your daily tasks</h3>
-      <form className="flex gap-3 justify-between mb-3" onSubmit={submitButton}>
+      <form className="addtotodoform flex gap-3 justify-between mb-3" onSubmit={submitButton}>
         <input
           type="text"
           name="addTask"

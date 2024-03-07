@@ -1,5 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
+// import { fetchBlogData } from "./api"
+
 
 const StateContext = createContext({
     todos: [],
@@ -9,21 +11,40 @@ export const useAppState = () => useContext(StateContext);
 
 export const AppStateProvider = ({ children }) => {
 
-    // input filed value aka task
-    const [value, setValue] = useState("")
 
+
+    // input filed value aka task
+    const [value, setValue] = useState()
     const [todos, setTodos] = useState([]);
+
+
+    //import blog articles
+    const [blogArticles, setBlogArticles] = useState([])
+
+
 
 
     const getServersTasks = () => {
         fetch('http://localhost:3500/api-todo')
             .then((response) => response.json())
             .then((todos) => {
+                console.log("todos aici", todos);
                 setTodos(todos);
             });
+
     };
 
 
+    const fetchBlogData = () => {
+        fetch("http://localhost:3500/blogdata")
+            .then((response) => response.json())
+
+            .then((data) => {
+                console.log("aici trebuei sa vin datele de pe server", data);
+                setBlogArticles(data);
+            });
+
+    }
 
 
 
@@ -56,14 +77,8 @@ export const AppStateProvider = ({ children }) => {
 
 
 
-
-
-
-
-
-
     return (
-        <StateContext.Provider value={{ todos, getServersTasks, setTodos, value, setValue, addTodo }}>
+        <StateContext.Provider value={{ todos, getServersTasks, setTodos, value, setValue, addTodo, blogArticles, setBlogArticles, fetchBlogData }}>
             {children}
         </StateContext.Provider>
     );
