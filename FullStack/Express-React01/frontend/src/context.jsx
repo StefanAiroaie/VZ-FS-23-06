@@ -19,7 +19,7 @@ export const AppStateProvider = ({ children }) => {
 
 
     //import blog articles
-    const [blogArticles, setBlogArticles] = useState([])
+    const [articles, setArticles] = useState([])
 
 
 
@@ -35,20 +35,98 @@ export const AppStateProvider = ({ children }) => {
     };
 
 
-    const fetchBlogData = () => {
-        fetch("http://localhost:3500/blogdata")
-            .then((response) => response.json())
 
-            .then((data) => {
-                console.log("aici trebuei sa vin datele de pe server", data);
-                setBlogArticles(data);
-            });
 
+
+
+
+
+    const getArticles = async () => {
+        const response = await fetch("http://localhost:3500/blogdata");
+        const data = await response.json();
+        console.log("aici trebuei sa vin datele de pe server", data);
+        return data;
     }
 
 
+    //le trimite pe server
+    const postArticle = (newArticle) =>
+        fetch("http://localhost:3500/blogdata", {
+            method: "POST",
+            body: newArticle
+        }).then((response) => response.json());
 
-    const addTodo = todo => {
+
+    const updateArticles = async () => {
+        try {
+            setArticles(await getArticles())
+        }
+        catch (err) {
+            console.error(err);
+        }
+    }
+
+
+    const addArticle = async (newArticle) => {
+        try {
+            await postArticle(newArticle)
+            updateArticles()
+        }
+        catch (err) {
+            console.error(err);
+        }
+    }
+
+
+    // AIIIIIIII
+    // const getBirds = () =>
+    //     fetch("http://localhost:3000/birds").then((response) => response.json());
+
+    // const updateBirds = async () => {
+    //     try {
+    //         setBirds(await getBirds());
+    //     } catch (err) {
+    //         console.error(err);
+    //     }
+    // };
+
+    // const addBird = async (birdData) => {
+    //     try {
+    //         await postBird(birdData);
+    //         updateBirds();
+    //     } catch (err) {
+    //         console.error(err);
+    //     }
+    // };
+
+    // IIIIIIII
+
+
+    // const addArticleToServer = (article) => {
+    //     const newArticle = {
+    //         title: article,
+    //     }
+    //     setBlogArticles([...blogArticles, newArticle])
+    //     fetch("http://localhost:3500/blogdata", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         },
+    //         body: JSON.stringify(newArticle)
+
+    //     })
+    //         .then(() => {
+    //             fetchBlogData()
+    //         })
+    //         .catch(() => {
+    //             console.error(err);
+    //         })
+    // }
+
+
+
+
+    const addTodo = (todo) => {
         // new task
         const newTodo = {
             id: uuidv4(),
@@ -78,7 +156,7 @@ export const AppStateProvider = ({ children }) => {
 
 
     return (
-        <StateContext.Provider value={{ todos, getServersTasks, setTodos, value, setValue, addTodo, blogArticles, setBlogArticles, fetchBlogData }}>
+        <StateContext.Provider value={{ todos, getServersTasks, setTodos, value, setValue, addTodo, articles, setArticles, addArticle, updateArticles, getArticles }}>
             {children}
         </StateContext.Provider>
     );

@@ -3,46 +3,62 @@ import { useRef, useState } from "react";
 
 const AddArticleForm = () => {
 
-    const { blogArticles, setBlogArticles } = useAppState();
+    const { addArticle } = useAppState();
 
-    // use state from context
-    const { value, setValue, addTodo } = useAppState();
+    const formRef = useRef();
+    console.log("formRef", formRef);
 
-    //set the walue from input field aka adds the task
-    const submitArticle = e => {
-        e.preventDefault()
-        console.log("value", value);
-        setValue("")
 
-    }
+
+
+    const submitArticle = async (event) => {
+        event.preventDefault()
+        const formData = new FormData(formRef.current)
+        addArticle(formData)
+        formRef.current.reset();
+    };
+
+
 
 
     return (
         <>
             <h1>add Article form - adds an article to blog</h1>
 
-            <div className="p-3">
-                <form className="addtotodoform flex gap-3 justify-between mb-3" onSubmit={submitArticle}>
+            <form ref={formRef} onSubmit={submitArticle}>
+                <label className="block mb-3">
+                    <p>title</p>
                     <input
+                        required name="title" type="text" placeholder="Name" />
+                </label>
+                <label className="block mb-3">
+                    <p>Add Photo</p>
+                    <input required type="file" name="image" />
+                </label>
+                <label className="block mb-3">
+                    <p>Description</p>
+                    <input
+                        required
                         type="text"
-                        name="Article Name"
-                        onChange={(e) => setValue(e.target.value)} value={value}
-                        className="placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
-                        placeholder="write your Article Name here"
+                        placeholder="Description"
+                        name="description"
                     />
-                    {/* <input
-                        type="text"
-                        name="Description"
-                        onChange={(e) => setValue(e.target.value)} value={value}
-                        className="placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
-                        placeholder="write your Description here"
-                    /> */}
-                    <button
-                        className="bg-indigo-500 rounded hover:bg-indigo-900 text-s text-white p-3"
-                        type="submit">add
-                    </button>
-                </form >
-            </div>
+                </label>
+
+                <button
+                    type="submit"
+                    className="bg-gray-800 text-white p-2 rounded-md shadow-md"
+                >
+                    Add Article
+                </button>
+            </form>
+
+
+
+
+
+
+
         </>
     );
 }

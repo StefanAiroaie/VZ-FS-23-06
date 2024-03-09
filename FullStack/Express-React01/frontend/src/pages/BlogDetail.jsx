@@ -5,28 +5,28 @@ import { useEffect } from "react";
 const BlogDetail = () => {
 
     //import data form CONTEXT
-    const { blogArticles, fetchBlogData } = useAppState()
+    const { articles, getArticles } = useAppState()
 
     useEffect(() => {
-        fetchBlogData();
+        getArticles();
     }, []);
 
     const id = useParams();
-    console.log(blogArticles);
 
-    const blogArticle = blogArticles.filter((article) => {
+
+    console.log("dsds", articles);
+    const blogArticle = articles.filter((article) => {
         console.log("aici este id", article.id);
         return article.id === id.id
     })
 
-
+    const serverAdress = "http://localhost:3500/"
 
     return (
         <>
-            <Nav />
             <main className="bg-white">
                 <img
-                    src={blogArticle[0]?.img_url}
+                    src={`${serverAdress}${blogArticle[0]?.imagePath}`}
                     alt={blogArticle[0]?.title}
                     className="aspect-video h-40 w-full object-cover object-center"
                 />
@@ -45,7 +45,7 @@ const BlogDetail = () => {
                     </div>
 
                     <img
-                        src={blogArticle[0]?.img_url}
+                        src={`${serverAdress}${blogArticle[0]?.imagePath}`}
                         alt={blogArticle[0]?.title}
                         className="aspect-video h-full w-full object-cover object-center"
                     />

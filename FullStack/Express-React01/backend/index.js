@@ -16,11 +16,11 @@ app.use(cors(corsOptions))
 
 
 // import and use appTodo from todoapp.js"
-import appTodo from "./apps/todoapp.js"
+import appTodo from "./todoapp/todoapp.js"
 app.use(appTodo);
 
 // import and use appBlog from blog.js"
-import appBlog from "./apps/blog.js"
+import appBlog from "./blog/blog.js"
 app.use(appBlog)
 
 

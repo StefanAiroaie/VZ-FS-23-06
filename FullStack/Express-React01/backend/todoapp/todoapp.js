@@ -2,18 +2,18 @@ import express from "express"
 import fs from "fs/promises"
 
 
-const appTodo = express()
+const appTodo = express.Router()
 
 try {
-    await fs.access("./daten/todo.json");
+    await fs.access("./todoapp/todo.json");
 } catch (err) {
-    await fs.writeFile("./daten/todo.json", JSON.stringify([]));
+    await fs.writeFile("./todoapp/todo.json", JSON.stringify([]));
 }
 
 
 //reads the todoap json
 const readServerDB = async () => {
-    const todos = await fs.readFile("./daten/todo.json", { encoding: "utf-8" });
+    const todos = await fs.readFile("./todoapp/todo.json", { encoding: "utf-8" });
     return JSON.parse(todos);
 }
 
@@ -39,7 +39,7 @@ appTodo.post("/api-todo", async (req, res) => {
         const todosJson = await readServerDB()
         res.json(todosJson);
         const newTodos = [...todosJson, newTodo];
-        await fs.writeFile("./daten/todo.json", JSON.stringify(newTodos));
+        await fs.writeFile("./todoapp/todo.json", JSON.stringify(newTodos));
         res.status(201).json(newTodo);
     } catch (err) {
         res.status(500).end();
@@ -59,7 +59,7 @@ appTodo.patch("/api-todo/:id", async (req, res) => {
         todoChangeStatus.completed = patchData.completed
         console.log("todos", todos);
         console.log("todoChangeStatus", todoChangeStatus);
-        await fs.writeFile("./daten/todo.json", JSON.stringify(todos));
+        await fs.writeFile("./todoapp/todo.json", JSON.stringify(todos));
 
         res.sendStatus(204);
     } catch (err) {
@@ -81,7 +81,7 @@ appTodo.delete("/api-todo/:id", async (req, res) => {
             return el.id !== id;
         });
 
-        await fs.writeFile("./daten/todo.json", JSON.stringify(todos));
+        await fs.writeFile("./todoapp/todo.json", JSON.stringify(todos));
         res.sendStatus(200);
     } catch (err) {
         console.error(err);

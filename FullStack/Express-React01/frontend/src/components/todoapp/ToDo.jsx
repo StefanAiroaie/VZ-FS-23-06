@@ -10,7 +10,7 @@ const ToDo = ({ task, statusTask, deleteTask, editTask }) => {
                     <p className={`text-left ${task.completed ? "line-through" : ""}`}>{task.task}</p>
                 </div>
 
-                <button onClick={() => editTask(task.id)}><p className="bg-green-500 p-1 text-[0.7rem] rounded">edit</p></button>
+                {/* <button onClick={() => editTask(task.id)}><p className="bg-green-500 p-1 text-[0.7rem] rounded">edit</p></button> */}
                 <button onClick={() => deleteTask(task.id)}><p className="bg-red-300 p-1 text-[0.7rem] rounded">delete</p></button>
             </div >
 
