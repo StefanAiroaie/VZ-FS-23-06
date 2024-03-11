@@ -21,6 +21,9 @@ export const AppStateProvider = ({ children }) => {
     //import blog articles
     const [articles, setArticles] = useState([])
 
+    //upload done or error mesage
+    const [sendMessage, setSendMessage] = useState("")
+
 
 
 
@@ -71,9 +74,17 @@ export const AppStateProvider = ({ children }) => {
         try {
             await postArticle(newArticle)
             updateArticles()
+            setSendMessage("the article was succesfull added")
         }
         catch (err) {
             console.error(err);
+            if (err.response && err.response.status === 400) {
+                // Afișăm un mesaj de eroare specific în caz de eroare 400
+                setSendMessage("Eroare: nu s-au putut adăuga articolul. Te rog verifică datele introduse.");
+            } else {
+                // Afișăm un mesaj de eroare generic în caz de alte erori
+                setSendMessage("A apărut o eroare. Te rog încearcă din nou mai târziu.");
+            }
         }
     }
 
@@ -156,7 +167,7 @@ export const AppStateProvider = ({ children }) => {
 
 
     return (
-        <StateContext.Provider value={{ todos, getServersTasks, setTodos, value, setValue, addTodo, articles, setArticles, addArticle, updateArticles, getArticles }}>
+        <StateContext.Provider value={{ todos, getServersTasks, setTodos, value, setValue, addTodo, articles, setArticles, addArticle, updateArticles, getArticles, sendMessage }}>
             {children}
         </StateContext.Provider>
     );

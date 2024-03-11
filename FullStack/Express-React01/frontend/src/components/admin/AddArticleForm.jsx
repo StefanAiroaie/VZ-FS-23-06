@@ -3,10 +3,12 @@ import { useRef, useState } from "react";
 
 const AddArticleForm = () => {
 
-    const { addArticle } = useAppState();
+    const { addArticle, sendMessage } = useAppState();
 
     const formRef = useRef();
     console.log("formRef", formRef);
+
+
 
 
 
@@ -24,7 +26,7 @@ const AddArticleForm = () => {
     return (
         <>
             <h1>add Article form - adds an article to blog</h1>
-
+            <p>aici este mesajul sau eroarea {sendMessage}</p>
             <form ref={formRef} onSubmit={submitArticle}>
                 <label className="block mb-3">
                     <p>title</p>
