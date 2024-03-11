@@ -1,5 +1,6 @@
 import express from "express"
 import cors from "cors"
+import "dotenv/config"
 
 
 const app = express()
@@ -22,6 +23,14 @@ app.use(appTodo);
 // import and use appBlog from blog.js"
 import appBlog from "./blog/blog.js"
 app.use(appBlog)
+
+
+import appExpenses from "./expenses/expenses-App.js"
+
+
+// wir sagen express, dass es die im expensesRouter definierten Routen verwenden soll,
+// allerdings nur für requests deren Pfad mit /expenses anfängt
+app.use("/", appExpenses)
 
 
 app.listen(PORT, () => {
