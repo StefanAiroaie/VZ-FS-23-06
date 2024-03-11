@@ -24,10 +24,8 @@ app.use(appTodo);
 import appBlog from "./blog/blog.js"
 app.use(appBlog)
 
-
+// import and use appExpenses from "./expenses/expenses-App.js"
 import appExpenses from "./expenses/expenses-App.js"
-
-
 // wir sagen express, dass es die im expensesRouter definierten Routen verwenden soll,
 // allerdings nur für requests deren Pfad mit /expenses anfängt
 app.use("/", appExpenses)
