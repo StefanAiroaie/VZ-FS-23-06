@@ -11,6 +11,7 @@ const navigation = [
     { name: 'Toto', href: '/todo', current: false },
     { name: 'Blog', href: '/blog', current: false },
     { name: 'Admin', href: '/admin', current: false },
+    { name: 'Expense', href: '/expenses', current: false }
 ]
 
 function classNames(...classes) {

@@ -1,3 +1,4 @@
+
 import { createContext, useContext, useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 // import { fetchBlogData } from "./api"
@@ -10,6 +11,38 @@ const StateContext = createContext({
 export const useAppState = () => useContext(StateContext);
 
 export const AppStateProvider = ({ children }) => {
+
+
+
+
+    // expenses start
+
+    const [addExpense, setAddExpense] = useState({})
+
+    const [expenses, setExpense] = useState([])
+
+
+
+    const fetchExpenses = async () => {
+        const response = await fetch("http://localhost:3500/expenses");
+        const expensesfromdb = await response.json();
+        return setExpense(expensesfromdb)
+    }
+
+    const postExpenses = (newExpense) =>
+        fetch("http://localhost:3500/expenses", {
+            headers: {
+                "Content-Type": "application/json",
+            },
+            method: "POST",
+            body: JSON.stringify(newExpense)
+        }).then((response) => response.json());
+
+
+
+
+
+    // expenses end
 
 
 
@@ -167,7 +200,7 @@ export const AppStateProvider = ({ children }) => {
 
 
     return (
-        <StateContext.Provider value={{ todos, getServersTasks, setTodos, value, setValue, addTodo, articles, setArticles, addArticle, updateArticles, getArticles, sendMessage }}>
+        <StateContext.Provider value={{ todos, getServersTasks, setTodos, value, setValue, addTodo, articles, setArticles, addArticle, updateArticles, getArticles, sendMessage, fetchExpenses, expenses, setExpense, postExpenses }}>
             {children}
         </StateContext.Provider>
     );

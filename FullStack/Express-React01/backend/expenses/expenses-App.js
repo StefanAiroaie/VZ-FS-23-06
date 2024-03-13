@@ -1,5 +1,5 @@
 import express from "express";
-import db from "./db.js";
+import db from "./ExpensesControler.js";
 import { z } from "zod";
 
 const appExpenses = express.Router();
